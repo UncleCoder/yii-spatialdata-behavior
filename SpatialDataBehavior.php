@@ -13,7 +13,7 @@
  * SpatialDataBehavior allows to interact with spatial-fields like regular arrays
  *
  * @author UncleCoder <UncleCoder@russia.ru>
- * @version 0.2
+ * @version 0.3
  */
 class SpatialDataBehavior extends CActiveRecordBehavior {
 
@@ -70,7 +70,6 @@ class SpatialDataBehavior extends CActiveRecordBehavior {
 			}
 			$owner->$field = CJSON::decode(str_replace(')]', ']]', str_replace('[(', '[[', $str)));
 		}
-		$event->isValid = true;
 	}
 
 	public function arrayToGeom($data) {
